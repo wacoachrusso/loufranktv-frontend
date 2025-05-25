@@ -17,7 +17,7 @@ export function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 sm:gap-8 lg:gap-12 mb-8 sm:mb-12">
           {/* Logo and company info */}
           <div className="lg:col-span-2 sm:col-span-2">
-            <Logo variant="full" className="h-10 mb-4" />
+            <Logo variant="full" className="h-24 mb-4" />
             <p className="text-muted-foreground text-xs sm:text-sm mb-4 sm:mb-6">
               Premium IPTV service offering 16,000+ HD & FHD channels from 50+ countries with ultra-fast zapping and thousands of movies & TV shows on demand.
             </p>

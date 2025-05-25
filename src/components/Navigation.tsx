@@ -35,14 +35,14 @@ export function Navigation() {
       <div className="container mx-auto px-3 sm:px-4 py-2 sm:py-3">
         <div className="flex items-center justify-between">
           {/* Enhanced Logo with hover effect */}
-          <Link to="/" className="flex-shrink-0 flex items-center group relative">
+          <Link to="/" className="flex-shrink-0 flex items-center group relative" aria-label="Homepage">
             {/* Subtle glow effect on hover */}
-            <motion.div 
+            <motion.div
               className="absolute -inset-2 rounded-full opacity-0 group-hover:opacity-40 transition-opacity duration-300 blur-md -z-10"
               style={{ background: 'radial-gradient(circle, rgba(59, 130, 246, 0.3) 0%, transparent 70%)' }}
               layoutId="logoGlow"
             />
-            <Logo variant="full" className="h-8 sm:h-10 md:h-12" />
+            <Logo variant="full" className="h-12 sm:h-16 md:h-20" />
           </Link>
           
           {/* Enhanced Desktop Navigation */}

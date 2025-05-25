@@ -132,7 +132,7 @@ export function TrialRequestModal({ isOpen, setIsOpen }: Props) {
                     id="name"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    className="w-full rounded-md border border-border bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 transition-colors"
+                    className="relative z-10 w-full rounded-md border border-border bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 transition-colors"
                     placeholder="Your name"
                     required
                   />
@@ -154,7 +154,7 @@ export function TrialRequestModal({ isOpen, setIsOpen }: Props) {
                     id="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="w-full rounded-md border border-border bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 transition-colors"
+                    className="relative z-10 w-full rounded-md border border-border bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 transition-colors"
                     placeholder="your.email@example.com"
                     required
                   />
@@ -169,7 +169,7 @@ export function TrialRequestModal({ isOpen, setIsOpen }: Props) {
                     id="phone"
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
-                    className="w-full rounded-md border border-border bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 transition-colors"
+                    className="relative z-10 w-full rounded-md border border-border bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 transition-colors"
                     placeholder="Your phone number"
                   />
                 </div>

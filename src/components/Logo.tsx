@@ -3,40 +3,29 @@ import { motion } from "framer-motion";
 
 interface LogoProps {
   className?: string;
-  variant?: "full" | "icon";
-  withText?: boolean;
+  variant?: "full" | "icon"; // Retaining variant for potential size differences
 }
 
-export function Logo({ className = "", variant = "full", withText = true }: LogoProps) {
+export function Logo({ className = "", variant = "full" }: LogoProps) {
   return (
     <div className={`relative ${className}`}>
       <motion.div
-        className="relative z-10"
+        className="relative z-10 h-full"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
       >
-        <div className="flex items-center">
-          <div className="relative">
+        <div className="flex items-center h-full">
+          <div className="relative h-full">
             <img 
-              src="/public/901661ac-f28e-4815-8069-61ae5363a100/logo-color.png" 
-              alt="LouFrank TV Logo" 
-              className={`${variant === "full" ? "h-10" : "h-8"} object-contain`}
+              src="/images/logo-loufrank-crew.png" // Path from public directory
+              alt="The LouFrank Crew Logo" 
+              className="h-full w-auto object-contain"
             />
             {/* Add subtle glow effect */}
             <div className="absolute inset-0 bg-primary opacity-10 blur-xl rounded-full -z-10"></div>
           </div>
-          
-          {withText && variant === "full" && (
-            <motion.div 
-              className="ml-3"
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-            >
-              <h2 className="text-xl font-bold tracking-wider text-foreground">LOUFRANK <span className="text-primary">TV</span></h2>
-            </motion.div>
-          )}
+
         </div>
       </motion.div>
       

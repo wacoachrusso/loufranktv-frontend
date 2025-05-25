@@ -24,6 +24,10 @@ export function Breadcrumbs({ items, className = '' }: BreadcrumbsProps) {
     ...items
   ];
 
+  if (breadcrumbItems.length === 1 && breadcrumbItems[0].url === '/') {
+    return null; // Don't render breadcrumbs if it's just "Home"
+  }
+
   return (
     <nav aria-label="Breadcrumb" className={`text-sm ${className}`}>
       <ol className="flex flex-wrap items-center space-x-1 md:space-x-2">

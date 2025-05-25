@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import { TrialRequestModal } from "../components/TrialRequestModal";
 // GoogleAnalytics now in Head component
 import { Link } from "react-router-dom";
 import { SEO } from "../components/SEO";
@@ -29,6 +30,11 @@ import { ChannelShowcaseSection } from "components/ChannelShowcaseSection";
 import { VodBenefitSection } from "components/VodBenefitSection";
 
 export default function App() {
+  const [isTrialModalOpen, setIsTrialModalOpen] = useState(false);
+
+  const handleOpenTrialModal = () => {
+    setIsTrialModalOpen(true);
+  };
   // Video player state
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(true);
@@ -175,8 +181,17 @@ export default function App() {
       <div className="container mx-auto px-4 py-12 text-center">
         <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to experience premium IPTV?</h2>
         <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">Try LouFrank TV free with our 36-hour trial access.</p>
-        <TrialRequestButton size="lg" />
+        <Button
+          variant="gradient"
+          size="lg"
+          onClick={handleOpenTrialModal}
+          data-trial-button="true"
+          className="text-lg py-6 px-8"
+        >
+          free 36 hour trial
+        </Button>
       </div>
+      <TrialRequestModal isOpen={isTrialModalOpen} setIsOpen={setIsTrialModalOpen} />
       
       {/* Remove unused main section */}
       <Footer />

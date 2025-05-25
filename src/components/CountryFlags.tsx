@@ -38,35 +38,38 @@ export function CountryFlags() {
   
   // Function to get flag image with multiple fallback mechanisms
   const getCountryFlagImage = (country: { code: string, name: string }) => {
+    const flagUrl = `https://flagcdn.com/w80/${country.code.toLowerCase()}.png`;
+
     return (
-      <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-primary/30 shadow-lg hover:scale-110 transition-transform hover:border-primary bg-gradient-to-br from-gray-700 to-gray-900">
-        <img 
-          src={`https://flagcdn.com/w80/${country.code.toLowerCase()}.png`}
+      <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-primary/30 shadow-lg hover:scale-110 transition-transform hover:border-primary bg-gradient-to-br from-gray-700 to-gray-900 flex items-center justify-center relative"> {/* Added relative for potential absolute positioning of fallback */}
+        <img
+          key={country.code} // Add a key for React reconciliation
+          src={flagUrl}
           alt={`${country.name} flag`}
           className="w-full h-full object-cover"
           loading="lazy"
+          onLoad={(e) => {
+            console.log(`Flag loaded (onLoad) for ${country.name}:`, (e.target as HTMLImageElement).src);
+            const container = (e.target as HTMLImageElement).parentElement;
+            const fallback = container?.querySelector('.flag-fallback-text');
+            if (fallback) (fallback as HTMLElement).style.display = 'none'; // Hide fallback if image loads
+          }}
           onError={(e) => {
-            const target = e.target as HTMLImageElement;
-            // Try first alternative source
-            target.onerror = (e2) => {
-              const target2 = e2.target as HTMLImageElement;
-              // Try second alternative source
-              target2.onerror = (e3) => {
-                const target3 = e3.target as HTMLImageElement;
-                // Final fallback - create text-based flag
-                target3.style.display = 'none';
-                const container = target3.parentElement;
-                if (container) {
-                  // Create styled fallback
-                  const fallback = document.createElement('div');
-                  fallback.className = 'w-full h-full flex items-center justify-center';
-                  fallback.innerHTML = `<span class="font-bold text-white text-xl">${country.name.substring(0, 2).toUpperCase()}</span>`;
-                  container.appendChild(fallback);
-                }
-              };
-              target2.src = `https://raw.githubusercontent.com/lipis/flag-icons/main/flags/4x3/${country.code.toLowerCase()}.svg`;
-            };
-            target.src = `https://purecatamphetamine.github.io/country-flag-icons/3x2/${country.code.toUpperCase()}.svg`;
+            const imgElement = e.target as HTMLImageElement;
+            console.error(`Flag failed (onError) for ${country.name}: ${imgElement.src}`);
+            imgElement.style.display = 'none'; // Hide broken image
+
+            const container = imgElement.parentElement;
+            if (container) {
+              let fallback = container.querySelector('.flag-fallback-text') as HTMLElement;
+              if (!fallback) {
+                fallback = document.createElement('div');
+                fallback.className = 'flag-fallback-text font-bold text-red-500 text-xl';
+                container.appendChild(fallback);
+              }
+              fallback.textContent = country.code.substring(0, 2).toUpperCase();
+              fallback.style.display = 'block'; // Ensure fallback is visible
+            }
           }}
         />
       </div>
