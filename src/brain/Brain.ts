@@ -1,5 +1,6 @@
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+
 import {
-  const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
   CheckHealthData,
   ContactFormRequest,
   GenericEmailRequest,
