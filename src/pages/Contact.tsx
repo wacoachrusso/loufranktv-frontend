@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { toast } from "sonner";
-import { SEO } from "../components/SEO";
+// import { SEO } from "../components/SEO";
 import brain from "brain";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
@@ -11,6 +11,7 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
+import { Breadcrumbs } from "../components/Breadcrumbs";
 
 const contactFormSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters" }),
@@ -59,7 +60,7 @@ export default function Contact() {
 
   return (
     <main className="min-h-screen relative overflow-hidden">
-      <SEO 
+      {/* <SEO 
         pageName="contact" 
         customDescription="Contact LouFrank TV for premium IPTV support, sales inquiries, or technical assistance. Our support team is available 24/7 to help with your entertainment needs."
         customMetaTags={[
@@ -69,7 +70,7 @@ export default function Contact() {
           { name: "Home", url: "/" },
           { name: "Contact", url: "/Contact" }
         ]}
-      />
+      /> */}
       {/* Premium background effect */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-[#050118]/90 to-black/95 z-0"></div>
       

@@ -61,66 +61,66 @@ export function Navigation() {
               />
             </Link>
             <Link 
-              to="/Features" 
-              className={`text-sm font-medium transition-colors hover:text-primary relative group overflow-hidden ${isActive("/Features") ? "text-primary" : "text-foreground/80"}`}
+              to="/features" 
+              className={`text-sm font-medium transition-colors hover:text-primary relative group overflow-hidden ${isActive("/features") ? "text-primary" : "text-foreground/80"}`}
             >
               <span className="relative z-10">Features</span>
               <motion.span 
                 className="absolute bottom-0 left-0 w-full h-[2px] bg-primary origin-left"
-                initial={{ scaleX: isActive("/Features") ? 1 : 0 }}
-                animate={{ scaleX: isActive("/Features") ? 1 : 0 }}
+                initial={{ scaleX: isActive("/features") ? 1 : 0 }}
+                animate={{ scaleX: isActive("/features") ? 1 : 0 }}
                 whileHover={{ scaleX: 1 }}
                 transition={{ duration: 0.3 }}
               />
             </Link>
             <Link 
-              to="/Pricing" 
-              className={`text-sm font-medium transition-colors hover:text-primary relative group overflow-hidden ${isActive("/Pricing") ? "text-primary" : "text-foreground/80"}`}
+              to="/pricing" 
+              className={`text-sm font-medium transition-colors hover:text-primary relative group overflow-hidden ${isActive("/pricing") ? "text-primary" : "text-foreground/80"}`}
             >
               <span className="relative z-10">Pricing</span>
               <motion.span 
                 className="absolute bottom-0 left-0 w-full h-[2px] bg-primary origin-left"
-                initial={{ scaleX: isActive("/Pricing") ? 1 : 0 }}
-                animate={{ scaleX: isActive("/Pricing") ? 1 : 0 }}
+                initial={{ scaleX: isActive("/pricing") ? 1 : 0 }}
+                animate={{ scaleX: isActive("/pricing") ? 1 : 0 }}
                 whileHover={{ scaleX: 1 }}
                 transition={{ duration: 0.3 }}
               />
             </Link>
             <Link 
-              to="/SetupGuides" 
-              className={`text-sm font-medium transition-colors hover:text-primary relative group overflow-hidden ${isActive("/SetupGuides") ? "text-primary" : "text-foreground/80"}`}
+              to="/setup-guides" 
+              className={`text-sm font-medium transition-colors hover:text-primary relative group overflow-hidden ${isActive("/setup-guides") ? "text-primary" : "text-foreground/80"}`}
             >
               <span className="relative z-10">Setup Guides</span>
               <motion.span 
                 className="absolute bottom-0 left-0 w-full h-[2px] bg-primary origin-left"
-                initial={{ scaleX: isActive("/SetupGuides") ? 1 : 0 }}
-                animate={{ scaleX: isActive("/SetupGuides") ? 1 : 0 }}
+                initial={{ scaleX: isActive("/setup-guides") ? 1 : 0 }}
+                animate={{ scaleX: isActive("/setup-guides") ? 1 : 0 }}
                 whileHover={{ scaleX: 1 }}
                 transition={{ duration: 0.3 }}
               />
             </Link>
             <Link 
-              to="/Testimonials" 
-              className={`text-sm font-medium transition-colors hover:text-primary relative group overflow-hidden ${isActive("/Testimonials") ? "text-primary" : "text-foreground/80"}`}
+              to="/testimonials" 
+              className={`text-sm font-medium transition-colors hover:text-primary relative group overflow-hidden ${isActive("/testimonials") ? "text-primary" : "text-foreground/80"}`}
             >
               <span className="relative z-10">Testimonials</span>
               <motion.span 
                 className="absolute bottom-0 left-0 w-full h-[2px] bg-primary origin-left"
-                initial={{ scaleX: isActive("/Testimonials") ? 1 : 0 }}
-                animate={{ scaleX: isActive("/Testimonials") ? 1 : 0 }}
+                initial={{ scaleX: isActive("/testimonials") ? 1 : 0 }}
+                animate={{ scaleX: isActive("/testimonials") ? 1 : 0 }}
                 whileHover={{ scaleX: 1 }}
                 transition={{ duration: 0.3 }}
               />
             </Link>
             <Link 
-              to="/FAQ" 
-              className={`text-sm font-medium transition-colors hover:text-primary relative group overflow-hidden ${isActive("/FAQ") ? "text-primary" : "text-foreground/80"}`}
+              to="/faq" 
+              className={`text-sm font-medium transition-colors hover:text-primary relative group overflow-hidden ${isActive("/faq") ? "text-primary" : "text-foreground/80"}`}
             >
               <span className="relative z-10">FAQ</span>
               <motion.span 
                 className="absolute bottom-0 left-0 w-full h-[2px] bg-primary origin-left"
-                initial={{ scaleX: isActive("/FAQ") ? 1 : 0 }}
-                animate={{ scaleX: isActive("/FAQ") ? 1 : 0 }}
+                initial={{ scaleX: isActive("/faq") ? 1 : 0 }}
+                animate={{ scaleX: isActive("/faq") ? 1 : 0 }}
                 whileHover={{ scaleX: 1 }}
                 transition={{ duration: 0.3 }}
               />
@@ -201,9 +201,9 @@ export function Navigation() {
                 transition={{ delay: 0.15 }}
               >
                 <Link 
-                  to="/Features" 
+                  to="/features" 
                   onClick={() => setMobileMenuOpen(false)}
-                  className={`block py-2 text-sm font-medium transition-all ${isActive("/Features") ? "text-primary" : "text-foreground/80"} hover:pl-1 hover:text-primary`}
+                  className={`block py-2 text-sm font-medium transition-all ${isActive("/features") ? "text-primary" : "text-foreground/80"} hover:pl-1 hover:text-primary`}
                 >
                   Features
                 </Link>
@@ -214,9 +214,9 @@ export function Navigation() {
                 transition={{ delay: 0.2 }}
               >
                 <Link 
-                  to="/Pricing" 
+                  to="/pricing" 
                   onClick={() => setMobileMenuOpen(false)}
-                  className={`block py-2 text-sm font-medium transition-all ${isActive("/Pricing") ? "text-primary" : "text-foreground/80"} hover:pl-1 hover:text-primary`}
+                  className={`block py-2 text-sm font-medium transition-all ${isActive("/pricing") ? "text-primary" : "text-foreground/80"} hover:pl-1 hover:text-primary`}
                 >
                   Pricing
                 </Link>
@@ -227,9 +227,9 @@ export function Navigation() {
                 transition={{ delay: 0.25 }}
               >
                 <Link 
-                  to="/SetupGuides" 
+                  to="/setup-guides" 
                   onClick={() => setMobileMenuOpen(false)}
-                  className={`block py-2 text-sm font-medium transition-all ${isActive("/SetupGuides") ? "text-primary" : "text-foreground/80"} hover:pl-1 hover:text-primary`}
+                  className={`block py-2 text-sm font-medium transition-all ${isActive("/setup-guides") ? "text-primary" : "text-foreground/80"} hover:pl-1 hover:text-primary`}
                 >
                   Setup Guides
                 </Link>
@@ -240,9 +240,9 @@ export function Navigation() {
                 transition={{ delay: 0.3 }}
               >
                 <Link 
-                  to="/Testimonials" 
+                  to="/testimonials" 
                   onClick={() => setMobileMenuOpen(false)}
-                  className={`block py-2 text-sm font-medium transition-all ${isActive("/Testimonials") ? "text-primary" : "text-foreground/80"} hover:pl-1 hover:text-primary`}
+                  className={`block py-2 text-sm font-medium transition-all ${isActive("/testimonials") ? "text-primary" : "text-foreground/80"} hover:pl-1 hover:text-primary`}
                 >
                   Testimonials
                 </Link>
@@ -253,9 +253,9 @@ export function Navigation() {
                 transition={{ delay: 0.35 }}
               >
                 <Link 
-                  to="/FAQ" 
+                  to="/faq" 
                   onClick={() => setMobileMenuOpen(false)}
-                  className={`block py-2 text-sm font-medium transition-all ${isActive("/FAQ") ? "text-primary" : "text-foreground/80"} hover:pl-1 hover:text-primary`}
+                  className={`block py-2 text-sm font-medium transition-all ${isActive("/faq") ? "text-primary" : "text-foreground/80"} hover:pl-1 hover:text-primary`}
                 >
                   FAQ
                 </Link>

@@ -119,7 +119,7 @@ export default function App() {
           <div className="bg-background/40 backdrop-blur-lg rounded-xl border border-border/40 p-6 shadow-lg transition-all hover:shadow-primary/10 hover:border-primary/40 hover:scale-105 hover:-translate-y-1">
             <h3 className="text-xl font-bold mb-3 text-primary">Premium Features</h3>
             <p className="text-muted-foreground mb-4">Ultra-fast zapping, no freezing, and 16,000+ HD channels from 50+ countries.</p>
-            <Link to="/Features" className="inline-flex items-center text-primary hover:text-primary/80">
+            <Link to="/features" className="inline-flex items-center text-primary hover:text-primary/80">
               Explore Features
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4 ml-1">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
@@ -131,7 +131,7 @@ export default function App() {
           <div className="bg-background/40 backdrop-blur-lg rounded-xl border border-border/40 p-6 shadow-lg transition-all hover:shadow-primary/10 hover:border-primary/40 hover:scale-105 hover:-translate-y-1">
             <h3 className="text-xl font-bold mb-3 text-primary">Subscription Plans</h3>
             <p className="text-muted-foreground mb-4">Flexible plans for every household with no contracts and premium support.</p>
-            <Link to="/Pricing" className="inline-flex items-center text-primary hover:text-primary/80">
+            <Link to="/pricing" className="inline-flex items-center text-primary hover:text-primary/80">
               View Pricing
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4 ml-1">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
@@ -143,7 +143,7 @@ export default function App() {
           <div className="bg-background/40 backdrop-blur-lg rounded-xl border border-border/40 p-6 shadow-lg transition-all hover:shadow-primary/10 hover:border-primary/40 hover:scale-105 hover:-translate-y-1">
             <h3 className="text-xl font-bold mb-3 text-primary">Setup Guides</h3>
             <p className="text-muted-foreground mb-4">Easy setup instructions for all your devices with detailed step-by-step guides.</p>
-            <Link to="/SetupGuides" className="inline-flex items-center text-primary hover:text-primary/80">
+            <Link to="/setup-guides" className="inline-flex items-center text-primary hover:text-primary/80">
               Get Started
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4 ml-1">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
@@ -155,7 +155,7 @@ export default function App() {
           <div className="bg-background/40 backdrop-blur-lg rounded-xl border border-border/40 p-6 shadow-lg transition-all hover:shadow-primary/10 hover:border-primary/40 hover:scale-105 hover:-translate-y-1">
             <h3 className="text-xl font-bold mb-3 text-primary">Testimonials</h3>
             <p className="text-muted-foreground mb-4">See what our satisfied customers are saying about LouFrank TV service.</p>
-            <Link to="/Testimonials" className="inline-flex items-center text-primary hover:text-primary/80">
+            <Link to="/testimonials" className="inline-flex items-center text-primary hover:text-primary/80">
               Read Reviews
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4 ml-1">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
