@@ -1,4 +1,5 @@
 import {
+  const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
   CheckHealthData,
   ContactFormRequest,
   GenericEmailRequest,
@@ -42,7 +43,7 @@ export class Brain<SecurityDataType = unknown> extends HttpClient<SecurityDataTy
    */
   send_contact_form = (data: ContactFormRequest, params: RequestParams = {}) =>
     this.request<SendContactFormData, SendContactFormError>({
-      path: `/routes/contact`,
+      path: `${API_BASE_URL}/routes/contact`,
       method: "POST",
       body: data,
       type: ContentType.Json,
@@ -59,7 +60,7 @@ export class Brain<SecurityDataType = unknown> extends HttpClient<SecurityDataTy
    */
   send_welcome_email = (data: WelcomeEmailRequest, params: RequestParams = {}) =>
     this.request<SendWelcomeEmailData, SendWelcomeEmailError>({
-      path: `/routes/welcome`,
+      path: `${API_BASE_URL}/routes/welcome`,
       method: "POST",
       body: data,
       type: ContentType.Json,
@@ -76,7 +77,7 @@ export class Brain<SecurityDataType = unknown> extends HttpClient<SecurityDataTy
    */
   send_trial_request = (data: TrialRequestRequest, params: RequestParams = {}) =>
     this.request<SendTrialRequestData, SendTrialRequestError>({
-      path: `/routes/trial-request`,
+      path: `${API_BASE_URL}/routes/trial-request`,
       method: "POST",
       body: data,
       type: ContentType.Json,
@@ -93,7 +94,7 @@ export class Brain<SecurityDataType = unknown> extends HttpClient<SecurityDataTy
    */
   send_generic_email = (data: GenericEmailRequest, params: RequestParams = {}) =>
     this.request<SendGenericEmailData, SendGenericEmailError>({
-      path: `/routes/send`,
+      path: `${API_BASE_URL}/routes/send`,
       method: "POST",
       body: data,
       type: ContentType.Json,
@@ -110,7 +111,7 @@ export class Brain<SecurityDataType = unknown> extends HttpClient<SecurityDataTy
    */
   get_robots_txt = (params: RequestParams = {}) =>
     this.request<GetRobotsTxtData, any>({
-      path: `/routes/robots.txt`,
+      path: `${API_BASE_URL}/routes/robots.txt`,
       method: "GET",
       ...params,
     });
@@ -125,7 +126,7 @@ export class Brain<SecurityDataType = unknown> extends HttpClient<SecurityDataTy
    */
   get_sitemap_xml = (params: RequestParams = {}) =>
     this.request<GetSitemapXmlData, any>({
-      path: `/routes/sitemap.xml`,
+      path: `${API_BASE_URL}/routes/sitemap.xml`,
       method: "GET",
       ...params,
     });
