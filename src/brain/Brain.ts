@@ -20,6 +20,15 @@ import {
 import { ContentType, HttpClient, RequestParams } from "./http-client";
 
 export class Brain<SecurityDataType = unknown> extends HttpClient<SecurityDataType> {
+  constructor(apiConfig: any = {}) {
+    super(apiConfig);
+    // --- ADD THESE LINES ---
+    if (apiConfig.baseUrl) {
+      this.baseUrl = apiConfig.baseUrl;
+    }
+    // --- END ADDED LINES ---
+  }
+
   /**
    * @description Check health of application. Returns 200 when OK, 500 when not.
    *

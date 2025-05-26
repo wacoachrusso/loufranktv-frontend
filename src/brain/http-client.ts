@@ -45,7 +45,7 @@ export enum ContentType {
 }
 
 export class HttpClient<SecurityDataType = unknown> {
-  public baseUrl: string = "";
+  public baseUrl: string;
   private securityData: SecurityDataType | null = null;
   private securityWorker?: ApiConfig<SecurityDataType>["securityWorker"];
   private abortControllers = new Map<CancelToken, AbortController>();
@@ -181,7 +181,20 @@ export class HttpClient<SecurityDataType = unknown> {
     const payloadFormatter = this.contentFormatters[type || ContentType.Json];
     const responseFormat = format || requestParams.format;
 
-    return this.customFetch(`${baseUrl || this.baseUrl || ""}${path}${queryString ? `?${queryString}` : ""}`, {
+    const currentPath = path;
+    let resolvedUrl;
+
+    // Check if the path provided is already an absolute URL
+    if (/^https?:\/\//i.test(currentPath)) {
+      resolvedUrl = currentPath; // If so, use it directly
+    } else {
+      // Otherwise, prepend the baseUrl (from parameter, instance, or fallback to empty string)
+      resolvedUrl = `${baseUrl || this.baseUrl || ""}${currentPath}`;
+    }
+
+    const finalUrl = `${resolvedUrl}${queryString ? `?${queryString}` : ""}`;
+
+    return this.customFetch(finalUrl, {
       ...requestParams,
       headers: {
         ...(requestParams.headers || {}),
