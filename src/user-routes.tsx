@@ -13,9 +13,7 @@ const Features = lazy(() => import("./pages/Features.tsx"));
 const Pricing = lazy(() => import("./pages/Pricing.tsx"));
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy.tsx"));
 const RefundPolicy = lazy(() => import("./pages/RefundPolicy.tsx"));
-const Robots = lazy(() => import("./pages/Robots.tsx"));
 const SetupGuides = lazy(() => import("./pages/SetupGuides.tsx"));
-const Sitemap = lazy(() => import("./pages/Sitemap.tsx"));
 const TermsOfService = lazy(() => import("./pages/TermsOfService.tsx"));
 const Testimonials = lazy(() => import("./pages/Testimonials.tsx"));
 const UsingAI = lazy(() => import("./pages/UsingAI.tsx"));
@@ -32,10 +30,8 @@ export const userRoutes: RouteObject[] = [
 	{ path: "/privacypolicy", element: <PrivacyPolicy />},
 	{ path: "/refund-policy", element: <RefundPolicy />},
 	{ path: "/refundpolicy", element: <RefundPolicy />},
-	{ path: "/robots", element: <Robots />},
 	{ path: "/setup-guides", element: <SetupGuides />},
 	{ path: "/setupguides", element: <SetupGuides />},
-	{ path: "/sitemap", element: <Sitemap />},
 	{ path: "/terms-of-service", element: <TermsOfService />},
 	{ path: "/termsofservice", element: <TermsOfService />},
 	{ path: "/testimonials", element: <Testimonials />},

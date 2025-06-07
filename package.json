@@ -327,6 +327,8 @@
     "@types/recordrtc": "^5",
     "@types/three": "^0",
     "@types/vinyl-fs": "^3",
+    "@typescript-eslint/eslint-plugin": "^7.6.0",
+    "@typescript-eslint/parser": "^7.6.0",
     "@vitejs/plugin-react": "^4.0.0",
     "@vitejs/plugin-react-swc": "3.3.2",
     "autoprefixer": "^10.4.20",
