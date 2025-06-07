@@ -1,0 +1,6 @@
+# robots.txt for LouFrank TV
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://loufranktv.com/sitemap.xml

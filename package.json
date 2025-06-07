@@ -5,9 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "npm run generate-sitemap && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "generate-sitemap": "node scripts/generate-sitemap.cjs",
+    "test": "echo \"No tests specified\" && exit 0"
   },
   "dependencies": {
     "@11labs/react": "0.0.4",
