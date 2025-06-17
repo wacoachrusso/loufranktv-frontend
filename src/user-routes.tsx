@@ -19,6 +19,7 @@ const Sitemap = lazy(() => import("./pages/Sitemap.tsx"));
 const TermsOfService = lazy(() => import("./pages/TermsOfService.tsx"));
 const Testimonials = lazy(() => import("./pages/Testimonials.tsx"));
 const UsingAI = lazy(() => import("./pages/UsingAI.tsx"));
+const PayWithZelle = lazy(() => import("./pages/PayWithZelle.tsx"));
 
 export const userRoutes: RouteObject[] = [
 
@@ -41,5 +42,6 @@ export const userRoutes: RouteObject[] = [
 	{ path: "/testimonials", element: <Testimonials />},
 	{ path: "/using-ai", element: <UsingAI />},
 	{ path: "/usingai", element: <UsingAI />},
+	{ path: "/pay-with-zelle", element: <PayWithZelle />},
 
 ];
