@@ -68,21 +68,13 @@ const buildVariables = () => {
 export default defineConfig({
 	define: buildVariables(),
 	plugins: [react(), splitVendorChunkPlugin(), tsConfigPaths(), injectHTML()],
-	server: {
-		proxy: {
-			"/routes": {
-				target: "http://127.0.0.1:8000",
-				changeOrigin: true,
-			},
-		},
-	},
-	resolve: {
-		alias: {
-			resolve: {
-				alias: {
-					"@": path.resolve(__dirname, "./src"),
-				},
-			},
-		},
-	},
+        server: {
+                proxy: {
+                        "/routes": {
+                                target: "http://127.0.0.1:8000",
+                                changeOrigin: true,
+                        },
+                },
+        }
+        // Path aliases are provided by vite-tsconfig-paths
 });
